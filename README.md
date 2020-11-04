@@ -32,5 +32,5 @@ jobs:
       - name: Do the Scan
         uses: jhu-library-operations/grype-action
         with: 
-          grype-options: -o -s '(Critical|High)' -k
+          grype-options: "-o -s (Critical|High) -k"
 ```
