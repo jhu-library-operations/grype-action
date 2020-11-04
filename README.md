@@ -1,9 +1,9 @@
 # grype-scan-repo-action
-A github action to scan a repository with grype
+A github action to scan a repository with grype.  This uses the dockerized version of the [grype_scan_repo](https://github.com/jhu-library-operations/grype_scan_repo) script that we created.  It runs a a github action and will fail if vulnerablilities are round.  This can allow for a discussion about if they can be an accepted risk.  The PR can still be merged with failed checks, so this can be overriden.
 
 ## Inputs
 ### grype-options
-**Optional** The options to pass to grype.
+**Optional** The options to pass to grype.  For the severity, because of quote passing and such, do not quote the severity filter.  It may fail to catch things if it winds up quoted.
 
 ## Outputs
 **None**
