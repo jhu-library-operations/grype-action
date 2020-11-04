@@ -1,0 +1,14 @@
+#action.yml
+name: "Grype Repository Scanner"
+description: 'Run a grype scan on your repository.'
+inputs: 
+  grype-options:
+    description: 'Options to pass to grype'
+    required: false
+    default: ''
+
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ grype-options }}
