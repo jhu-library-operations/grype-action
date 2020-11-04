@@ -12,9 +12,7 @@ A github action to scan a repository with grype
 
 ```
 name: Scan repo for security flaws in container images.
-on:
-  release:
-    types: [published]
+on: [pull_request]
 jobs:
   scan-repository:
     name: Scan the repository with the Grype Scan Repo action.
